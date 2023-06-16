@@ -1,0 +1,6 @@
+<label for="" class="my-1">{{title}}</label>
+        <select class="form-control" name="categoryId"  #mySelect
+        (change)='onOptionsSelected(mySelect.value)'>
+        <option value="all" selected>All</option>
+            <option [value]="item.id" *ngFor="let item of data">{{item.name}}</option>            
+        </select>
